@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className={`${styles['app-wrapper']} ${styles.bg}`}>
       <div className={styles.lightLayer} />
-      <BrowserRouter>
+      <BrowserRouter basename="/birthday-surprise-for-someone-special">
         <Routes>
           <Route path="/" element={<GiftBox nextRoute="/before-we-start" />} />
           <Route path="/before-we-start" element={<AgePage nextRoute="/puzzle" />} />
