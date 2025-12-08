@@ -1,0 +1,1 @@
+export {PuzzlePage} from './puzzle-page';

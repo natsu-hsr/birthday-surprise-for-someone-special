@@ -1,0 +1,1 @@
+export {CurvedLoop} from './curved-loop-text';

@@ -1,0 +1,27 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  padding-bottom: calc(60px + 20px); // для футера + отступ
+
+  z-index: 2;
+}
+
+.title {
+  text-align: center;
+  font-size: 62px;
+  font-weight: bold;
+  color: #2D3748;
+  padding: 24px 0;
+  padding-bottom: 12px;
+  z-index: 50;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    margin-bottom: calc(70px);  // для футера + отступ
+  }
+  .title {
+    font-size: 52px;
+  }
+}

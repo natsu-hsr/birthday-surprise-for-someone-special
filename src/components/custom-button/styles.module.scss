@@ -1,0 +1,9 @@
+.button {
+  font-size: 16px !important;
+  border-radius: 14px !important;
+  margin: 0 auto !important;
+
+  &:disabled {
+    color: #fff !important;
+  }
+}

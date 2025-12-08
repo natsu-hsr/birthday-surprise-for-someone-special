@@ -1,0 +1,1 @@
+export {CustomPage} from './custom-page';

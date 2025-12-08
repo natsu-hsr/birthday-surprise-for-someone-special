@@ -1,0 +1,85 @@
+.card {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%) scale(0.85);
+  opacity: 0;
+  // transform: translate(-50%, -60%);
+  // opacity: 1;
+  pointer-events: none;
+
+  transition:
+    transform 1s cubic-bezier(0.2, 1, 0.3, 1),
+    opacity 0.9s ease;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cardVisible { 
+  opacity: 1;
+  transform: translate(-50%, -60%) scale(1);
+  pointer-events: auto;
+}
+
+.content {
+  background: #ffd2db; 
+  padding: 48px 44px;
+  border-radius: 22px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow:
+    0 6px 20px rgba(255, 100, 140, 0.25),
+    0 0 30px rgba(255, 200, 210, 0.3);
+  text-align: center;
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 16px 0;
+  color: #2D3748;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #2D3748;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 18px;
+  color: #2D3748;
+}
+
+/* Мобильная версия */
+@media (max-width: 480px) {
+  .card {
+    padding: 12px;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .content {
+    padding: 24px 36px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+}

@@ -1,0 +1,1 @@
+export {PhotoQuiz} from './photo-quiz';
