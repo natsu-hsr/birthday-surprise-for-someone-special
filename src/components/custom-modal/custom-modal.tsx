@@ -46,7 +46,7 @@ export const CustomModal: FC<CustomModalProps> = ({
           alt="celebration"
         /> */}
 
-        <video autoPlay loop muted playsInline>
+        <video className={styles.gif} autoPlay loop muted playsInline>
           <source src={gifs[svgName]} type="video/mp4" />
         </video>
 
