@@ -1,4 +1,4 @@
-import {useState, type FC} from "react";
+import {useRef, useState, type FC} from "react";
 import {useNavigate} from "react-router-dom";
 
 import {CustomPage} from "../../components/custom-page";
@@ -47,13 +47,19 @@ export const CasinoPage: FC<PageFinishProps> = ({nextRoute}) => {
   const [allWishes, setAllWishes] = useState<string[]>([]);
   const [isModalOpen, setModalOpen] = useState(false);
 
+  const wheelRef = useRef<HTMLDivElement | null>(null);
+
   const segmentCount = SEGMENTS.length;
   const theta = 360 / segmentCount;
 
   const handleSpin = () => {
     if (isSpinning || spins >= 3) return;
 
-    window.scrollTo({top: 0, behavior: "smooth"});
+    wheelRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
     setIsSpinning(true);
 
     const index = Math.floor(Math.random() * segmentCount);
@@ -86,7 +92,7 @@ export const CasinoPage: FC<PageFinishProps> = ({nextRoute}) => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
-            <div className={styles.wheelWrapper}>
+            <div className={styles.wheelWrapper} ref={wheelRef}>
               <svg
                 className={styles.wheel}
                 viewBox="0 0 200 200"

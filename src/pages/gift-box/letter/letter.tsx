@@ -34,7 +34,7 @@ export const Letter: FC<LetterProps> = ({isOpen, nextRoute}) => {
 
         <p className={styles.text}>
           В конце тебя будет ждать небольшая открытка. Рекомендую сначала пройти все задания,
-          но если что, прочитать ее можно <Link className={styles.link} to="/my-message-to-you">по ссылке</Link>
+          но, если что, прочитать ее можно <Link className={styles.link} to="/my-message-to-you">по ссылке</Link>
         </p>
 
         <p className={styles.text}>

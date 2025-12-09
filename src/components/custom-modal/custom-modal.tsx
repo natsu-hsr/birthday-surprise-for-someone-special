@@ -38,7 +38,14 @@ export const CustomModal: FC<CustomModalProps> = ({
   buttonTitle,
 }) => {
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
+    <Dialog
+      open={open}
+      onClose={onClose}
+      maxWidth="xs"
+      fullWidth
+      hideBackdrop
+      BackdropProps ={{style: {backgroundColor: 'transparent'}}}
+    >
       <DialogContent className={styles.content}>
         {/* <img
           className={styles.gif}
