@@ -1,4 +1,4 @@
-import {useState, type FC} from "react";
+import {useRef, useState, type FC} from "react";
 import {useNavigate} from "react-router-dom";
 
 import {CustomPage} from "../../components/custom-page";
@@ -43,6 +43,8 @@ const QUESTIONS = [
 export const PhotoQuiz: FC<PageFinishProps> = ({nextRoute}) => {
   const navigate = useNavigate();
 
+  const imgRef = useRef<HTMLDivElement | null>(null);
+
   const [active, setActive] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
@@ -59,6 +61,10 @@ export const PhotoQuiz: FC<PageFinishProps> = ({nextRoute}) => {
       setActive(active + 1);
       setSelected(null);
       setShowResult(false);
+      imgRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
 
@@ -70,7 +76,7 @@ export const PhotoQuiz: FC<PageFinishProps> = ({nextRoute}) => {
           Посмотри на фото ниже и попробуй вспомнить, где они сделаны:
         </h1>
 
-        <div className={styles.quizContainer}>
+        <div className={styles.quizContainer} ref={imgRef}>
           {QUESTIONS.map((q, index) => (
             <div
               key={index}
