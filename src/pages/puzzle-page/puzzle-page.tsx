@@ -8,7 +8,7 @@ import {CustomPage} from '../../components/custom-page';
 import type {PageFinishProps} from '../../types';
 
 import styles from './styles.module.scss';
-import puzzleImg from "/src/assets/puzzle-img.jpg";
+import puzzleImg from "/src/assets/puzzle-img.webp";
 
 export const PuzzlePage: FC<PageFinishProps> = ({nextRoute}) => {
   const navigate = useNavigate();

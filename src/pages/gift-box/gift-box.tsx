@@ -4,9 +4,9 @@ import {CurvedLoop} from "./curved-loop-text";
 import {Letter} from "./letter";
 import type {PageFinishProps} from "../../types";
 
-import giftBoxFrontImg from "/src/assets/gift-box-front.png";
-import capybaraImg from "/src/assets/capybara.png";
-import giftBoxImg from "/src/assets/gift-box.png";
+import giftBoxFrontImg from "/src/assets/gift-box-front.webp";
+import capybaraImg from "/src/assets/capybara.webp";
+import giftBoxImg from "/src/assets/gift-box.webp";
 
 import styles from "./styles.module.scss";
 

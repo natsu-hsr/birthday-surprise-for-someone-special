@@ -10,9 +10,9 @@ import {CustomButton} from "../custom-button";
 
 import styles from './styles.module.scss';
 
-import gif1 from "/src/assets/cat-driving.gif";
-import gif2 from "/src/assets/cat-wow.gif";
-import gif3 from "/src/assets/happy-cat.gif";
+import gif1 from "/src/assets/cat-driving.mp4";
+import gif2 from "/src/assets/cat-wow.mp4";
+import gif3 from "/src/assets/happy-cat.mp4";
 
 const gifs: Record<string, string> = {
   "cat-driving.gif": gif1,
@@ -40,11 +40,15 @@ export const CustomModal: FC<CustomModalProps> = ({
   return (
     <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
       <DialogContent className={styles.content}>
-        <img
+        {/* <img
           className={styles.gif}
           src={gifs[svgName]}
           alt="celebration"
-        />
+        /> */}
+
+        <video autoPlay loop muted playsInline>
+          <source src={gifs[svgName]} type="video/mp4" />
+        </video>
 
         <DialogTitle className={styles.title}>
           {title ?? 'Отличная работа!'}

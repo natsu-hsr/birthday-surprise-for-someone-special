@@ -41,6 +41,8 @@
   border-radius: 16px;
   border: 2px dashed #c7c7c796;
   overflow: hidden;
+
+  touch-action: none;
   
   :global {
     // индексы, чтобы зафиксированные плитки не перекрывали свободные
