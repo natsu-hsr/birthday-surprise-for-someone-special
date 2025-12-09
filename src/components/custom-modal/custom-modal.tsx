@@ -10,6 +10,16 @@ import {CustomButton} from "../custom-button";
 
 import styles from './styles.module.scss';
 
+import gif1 from "/src/assets/cat-driving.gif";
+import gif2 from "/src/assets/cat-wow.gif";
+import gif3 from "/src/assets/happy-cat.gif";
+
+const gifs: Record<string, string> = {
+  "cat-driving.gif": gif1,
+  "cat-wow.gif": gif2,
+  "happy-cat.gif": gif3,
+};
+
 interface CustomModalProps {
   open: boolean;
   onClose: () => void;
@@ -32,7 +42,7 @@ export const CustomModal: FC<CustomModalProps> = ({
       <DialogContent className={styles.content}>
         <img
           className={styles.gif}
-          src={`/src/assets/${svgName}`}
+          src={gifs[svgName]}
           alt="celebration"
         />
 

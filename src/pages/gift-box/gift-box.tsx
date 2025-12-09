@@ -4,6 +4,10 @@ import {CurvedLoop} from "./curved-loop-text";
 import {Letter} from "./letter";
 import type {PageFinishProps} from "../../types";
 
+import giftBoxFrontImg from "/src/assets/gift-box-front.png";
+import capybaraImg from "/src/assets/capybara.png";
+import giftBoxImg from "/src/assets/gift-box.png";
+
 import styles from "./styles.module.scss";
 
 export const GiftBox: FC<PageFinishProps> = ({nextRoute}) => {
@@ -24,21 +28,21 @@ export const GiftBox: FC<PageFinishProps> = ({nextRoute}) => {
       >
 
         <img
-          src="/src/assets/gift-box-front.png"
+          src={giftBoxFrontImg}
           className={styles.boxFront}
           alt=""
           draggable={false}
         />
 
         <img
-          src="/src/assets/capybara.png"
+          src={capybaraImg}
           className={styles.lid}
           alt=""
           draggable={false}
         />
 
         <img
-          src="/src/assets/gift-box.png"
+          src={giftBoxImg}
           className={styles.box}
           alt=""
           draggable={false}

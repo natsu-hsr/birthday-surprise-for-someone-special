@@ -150,7 +150,7 @@ export const CasinoPage: FC<PageFinishProps> = ({nextRoute}) => {
               <div className={styles.pointer} />
             </div>
 
-            <div className={styles.counter}>{spins} вращений из 3</div>
+            <div className={styles.counter}>Осталось {3 - spins} попытки</div>
           </div>
 
           <div className={styles.right}>

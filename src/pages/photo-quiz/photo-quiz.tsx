@@ -8,28 +8,33 @@ import type {PageFinishProps} from "../../types";
 
 import styles from "./styles.module.scss";
 
+import img1 from "/src/assets/quiz/1.jpg";
+import img2 from "/src/assets/quiz/2.jpg";
+import img3 from "/src/assets/quiz/3.jpg";
+import img4 from "/src/assets/quiz/4.jpg";
+
 const QUESTIONS = [
   {
     id: 1,
-    img: "/src/assets/quiz/1.jpg",
+    img: img1,
     options: ["Национальная библиотека Минска", "Этажи", "Лахта Центр"],
     correct: 0,
   },
   {
     id: 2,
-    img: "/src/assets/quiz/2.jpg",
+    img: img2,
     options: ["Asiatiq", "Animals", "Nobel"],
     correct: 2,
   },
   {
     id: 3,
-    img: "/src/assets/quiz/3.jpg",
+    img: img3,
     options: ["Наб. реки Смоленки", "Большая морская", "Обводный канал"],
     correct: 0,
   },
   {
     id: 4,
-    img: "/src/assets/quiz/4.jpg",
+    img: img4,
     options: ["Новая Голландия", "Севкабель", "Елагин остров"],
     correct: 1,
   },

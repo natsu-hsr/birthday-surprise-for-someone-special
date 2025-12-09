@@ -8,6 +8,7 @@ import {CustomPage} from '../../components/custom-page';
 import type {PageFinishProps} from '../../types';
 
 import styles from './styles.module.scss';
+import puzzleImg from "/src/assets/puzzle-img.jpg";
 
 export const PuzzlePage: FC<PageFinishProps> = ({nextRoute}) => {
   const navigate = useNavigate();
@@ -16,14 +17,15 @@ export const PuzzlePage: FC<PageFinishProps> = ({nextRoute}) => {
   return (
     <CustomPage title="Твое первое задание - пазл">
       <div className={styles.wrapper}>
-        <p className={styles.desc}>
-          На картинке ниже изображено кое-что, что ты очень хочешь. Перемещай плитки и собери пазл, чтобы пройти дальше
-        </p>
+        <div className={styles.desc}>
+          На картинке ниже изображено кое-что, что ты очень хочешь.
+          <br />Перемещай плитки и собери пазл чтобы пройти дальше
+        </div>
 
         <div className={styles.card}>
           <div className={styles.puzzleBox}>
             <JigsawPuzzle
-              imageSrc="/src/assets/puzzle-img.jpg"
+              imageSrc={puzzleImg}
               rows={3}
               columns={3}
               onSolved={() => {
