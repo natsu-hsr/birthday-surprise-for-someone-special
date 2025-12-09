@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 import {CustomButton} from '../../../components/custom-button';
 
@@ -30,7 +30,15 @@ export const Letter: FC<LetterProps> = ({isOpen, nextRoute}) => {
         <p className={styles.text}>
           Впереди тебя ждет пара заданий, проверка памяти и много теплых слов.
           Но главное, что всё это я сделал специально для тебя, и от чистого сердца.
-          Так что, если готова, нажимай кнопку ниже и поехали :)
+        </p>
+
+        <p className={styles.text}>
+          В конце тебя будет ждать небольшая открытка. Рекомендую сначала пройти все задания,
+          но если что, прочитать ее можно <Link className={styles.link} to="/my-message-to-you">по ссылке</Link>
+        </p>
+
+        <p className={styles.text}>
+          Ну а если готова, нажимай кнопку ниже и поехали :)
         </p>
 
         <CustomButton title='Начать путешествие!' onClick={() => navigate(nextRoute)} />
