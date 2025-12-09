@@ -8,6 +8,7 @@ import {PhotoQuiz} from './pages/photo-quiz';
 import {Footer} from './components/footer';
 import {CasinoPage} from './pages/casino-page';
 import {FinalPage} from './pages/final-page';
+import {ScrollToTop} from './components/scroll-to-top';
 
 import styles from './App.module.scss';
 
@@ -16,6 +17,7 @@ const App = () => {
     <div className={`${styles['app-wrapper']} ${styles.bg}`}>
       <div className={styles.lightLayer} />
       <BrowserRouter basename="/birthday-surprise-for-someone-special">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<GiftBox nextRoute="/before-we-start" />} />
           <Route path="/before-we-start" element={<AgePage nextRoute="/puzzle" />} />
