@@ -53,6 +53,7 @@ export const CasinoPage: FC<PageFinishProps> = ({nextRoute}) => {
   const handleSpin = () => {
     if (isSpinning || spins >= 3) return;
 
+    window.scrollTo({top: 0, behavior: "smooth"});
     setIsSpinning(true);
 
     const index = Math.floor(Math.random() * segmentCount);
