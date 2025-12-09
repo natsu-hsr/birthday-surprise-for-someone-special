@@ -55,10 +55,14 @@ export const CasinoPage: FC<PageFinishProps> = ({nextRoute}) => {
   const handleSpin = () => {
     if (isSpinning || spins >= 3) return;
 
-    wheelRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    if (wheelRef.current) {
+      const top = wheelRef.current.getBoundingClientRect().top + window.pageYOffset - 20;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+    }
 
     setIsSpinning(true);
 

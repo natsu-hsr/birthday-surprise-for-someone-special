@@ -61,22 +61,27 @@ export const PhotoQuiz: FC<PageFinishProps> = ({nextRoute}) => {
       setActive(active + 1);
       setSelected(null);
       setShowResult(false);
-      imgRef.current?.scrollIntoView({
+      
+      if (imgRef.current) {
+      const top = imgRef.current.getBoundingClientRect().top + window.pageYOffset - 20;
+
+      window.scrollTo({
+        top,
         behavior: "smooth",
-        block: "start",
       });
+    }
     }
   };
 
   return (
     <CustomPage title="Задание два - фото квиз">
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} ref={imgRef}>
         <h1 className={styles.title}>
           Пусть ты еще совсем молодая, но проверить память никогда не помешает :) <br />
           Посмотри на фото ниже и попробуй вспомнить, где они сделаны:
         </h1>
 
-        <div className={styles.quizContainer} ref={imgRef}>
+        <div className={styles.quizContainer}>
           {QUESTIONS.map((q, index) => (
             <div
               key={index}
