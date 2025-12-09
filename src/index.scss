@@ -12,6 +12,10 @@
   
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -40,6 +44,7 @@ body {
       #fff0f5 100%
     );
 
+  overscroll-behavior: none;
   background-attachment: fixed;
 }
 
